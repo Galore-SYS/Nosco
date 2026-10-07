@@ -52,35 +52,83 @@ import java.math.BigInteger;
 
 
 
-
+// ================================================================
+    // 1. BASICS
     // ================================================================
-    // 1. BASIC PROGRAM / INPUT / OUTPUT
-    // ================================================================
-
-    
-  // This is an example
-
-    public static void basicInputOutputDemo(Scanner input) {
-        System.out.print("Enter your name: ");
-        String name = input.nextLine();
-
-        System.out.print("Enter your age: ");
-        int age = input.nextInt();
-
-        System.out.println("Hello, " + name + "!");
-        System.out.println("You are " + age + " years old.");
-    }
 
     /*
-     * Scanner methods:
-     * input.nextInt()    -> integer
-     * input.nextDouble() -> decimal
-     * input.next()       -> one word
-     * input.nextLine()   -> whole line
+     * SCANNER METHODS:
+     * input.nextInt()    -> Reads an integer
+     * input.nextDouble() -> Reads a decimal
+     * input.next()       -> Reads a single word (up to space)
+     * input.nextLine()   -> Reads the whole line (including spaces)
      *
      * Common issue:
      * After nextInt()/nextDouble(), nextLine() may read the leftover
-     * newline. Use input.nextLine() once to consume it.
+     * newline character. Use input.nextLine() once to consume it.
+     */
+
+    /*
+     * PRINTING TO CONSOLE:
+     * System.out.println() -> Prints text and moves cursor to NEXT line
+     * System.out.print()   -> Prints text and keeps cursor on SAME line
+     * System.out.printf()  -> Formatted printing (e.g., %.2f for 2 decimal places)
+     */
+
+    /*
+     * PRIMITIVE DATA TYPES (Most Common 4):
+     * int     -> Whole numbers (-2 billion to +2 billion)
+     * double  -> Decimal numbers (e.g., 3.14159)
+     * boolean -> Logical flag (true or false only)
+     * char    -> Single character in SINGLE quotes (e.g., 'A', '$', '9')
+     *
+     * Note: String uses DOUBLE quotes ("Hello") and is an Object, not primitive!
+     */
+
+    /*
+     * TYPE CASTING (Converting Numbers):
+     * Automatic (Widening):  int -> double | double x = 5;      // Stores 5.0
+     * Manual (Narrowing):   double -> int  | int x = (int) 5.9; // Cuts off decimal -> 5 (NO rounding)
+     */
+
+    /*
+     * STRING COMPARISON (Crucial Beginner Trap):
+     * NEVER use '==' to compare String content (checks memory address, not text).
+     * ALWAYS use .equals() or .equalsIgnoreCase()
+     *
+     * Example:
+     * name.equals("Alice")           -> true if exact match
+     * name.equalsIgnoreCase("alice") -> true regardless of upper/lowercase
+     */
+
+    /*
+     * MODULO OPERATOR (%):
+     * Gives the REMAINDER of division, not the result.
+     * 7 % 3 = 1  (3 goes into 7 twice, remainder 1)
+     * 8 % 2 = 0  (Even numbers ALWAYS give 0 when % 2)
+     * 9 % 2 = 1  (Odd numbers ALWAYS give 1 when % 2)
+     */
+
+    /*
+     * OPERATOR SHORTCUTS:
+     * x++      -> x = x + 1 (Increment)
+     * x--      -> x = x - 1 (Decrement)
+     * x += 5   -> x = x + 5
+     * x *= 2   -> x = x * 2
+     */
+
+    /*
+     * LOGICAL OPERATORS:
+     * && -> AND (Both conditions must be true)
+     * || -> OR  (At least one condition must be true)
+     * !  -> NOT (Flips true to false, false to true)
+     */
+
+    /*
+     * LOOP SELECTION:
+     * for loop      -> Best when you KNOW exact number of repetitions.
+     * while loop    -> Best when repeating UNTIL a condition changes (0 or more times).
+     * do-while loop -> Guaranteed to run AT LEAST ONCE before checking condition.
      */
 
     // ================================================================
