@@ -1420,14 +1420,15 @@ public class ArrayMenuProgram {
 
         int choice = 0;
 
-        // Step 3: Repeatedly display the menu until the user selects option 4 (Exit)
-        while (choice != 4) {
+        // Step 3: Repeatedly display the menu until the user selects option 5 (Exit)
+        while (choice != 5) {
             System.out.println("\n========== MENU ==========");
             System.out.println("1. Display all numbers");
             System.out.println("2. Display positive numbers");
             System.out.println("3. Display negative numbers");
-            System.out.println("4. Exit");
-            System.out.print("Enter your choice (1-4): ");
+            System.out.println("4. Count zeroes");
+            System.out.println("5. Exit");
+            System.out.print("Enter your choice (1-5): ");
 
             choice = scanner.nextInt();
 
@@ -1462,11 +1463,21 @@ public class ArrayMenuProgram {
                     break;
 
                 case 4:
+                    int zeroCount = 0;
+                    for (int i = 0; i < numbers.length; i++) {
+                        if (numbers[i] == 0) {
+                            zeroCount++;
+                        }
+                    }
+                    System.out.println("Number of zeroes: " + zeroCount);
+                    break;
+
+                case 5:
                     System.out.println("Exiting program. Goodbye!");
                     break;
 
                 default:
-                    System.out.println("Invalid option! Please enter a number from 1 to 4.");
+                    System.out.println("Invalid option! Please enter a number from 1 to 5.");
                     break;
             }
         }
